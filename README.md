@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Face Recognition Authentication App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
+Nowadays many people are becoming increasingly familiar with facial recognition technology due to new unlocking features in phones requiring face ID. This allows the user to have an authorized access to his phone.
+Facial recognition is a technology that can match a human face from a digital image or video, against a database of stored faces.
+This type of identification is helpful for various commercial and law enforcement applications.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Resources Used
+### Language
+React.js
 
-### `npm start`
+### API
+face-api.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Database
+Firebase
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Working
+* The webcam detects and locates a face of the person individually.
+* The image of human face is captured, analyzed and transformed into a set of digital information (data) depending on an individual’s facial features.
+* The data (of the known faceprints) is then stored in the database (here, Firebase).
+* The data is fetched into the Sign-in page. The webcam captures the new image (the image of the person who wants to login).
+* The image with the maximum confidence and the maximum detection score, from the database of unknown faceprints, will be taken into consideration and compared with the new captured image. If the image if detected, the person logins successfully else a prompt appears on the screen which says: “No Such User Found”.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Scope Of Improvement
+* The face recognition authentication system made by me is using Firebase as the database which is more popular for smaller applications and not for big data and high-performance use cases. So the database can be changed here in order to increase the efficiency of the system.
+* Here I have used Face-api.js as the API for the face-detection system which is not that accurate as compared to Microsoft Computer Vision API, Inferdo, etc. So even that can be replaced to get highly accurate result.
+* Also I have used React.js as the frontend language, other languages like Next.js can also be used as they are extremely fast because of the static destinations and server-side rendering.
+* Also some code optimization can be done in order to make the web application run faster even for the slower network.
