@@ -30,3 +30,7 @@ Firebase
 * Here I have used Face-api.js as the API for the face-detection system which is not that accurate as compared to Microsoft Computer Vision API, Inferdo, etc. So even that can be replaced to get highly accurate result.
 * Also I have used React.js as the frontend language, other languages like Next.js can also be used as they are extremely fast because of the static destinations and server-side rendering.
 * Also some code optimization can be done in order to make the web application run faster even for the slower network.
+
+
+## Requirments
+You'll need to replace "https://[PROJECT_ID].firebaseio.com/[PROJECT_NAME].json" in two places in the file src/store/FaceDataProvider.js with the original Firebase Realtime Database API key.
