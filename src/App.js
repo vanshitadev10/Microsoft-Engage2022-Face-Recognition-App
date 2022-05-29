@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
-function App() {
+import DetectionScreen from './components/DetectionScreen';
+import ScanImage from './components/ScanImage';
+import LoginSuccessful from './components/LoginSuccessful';
+import Error from './components/Error';
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={localStorage.getItem('loggedIn') ? <DetectionScreen /> : <ScanImage />} />
+      <Route path="/add-face" element={<ScanImage />} />
+      <Route path="/face-login" element={<DetectionScreen />} />
+      <Route path="/login-successful" element={<LoginSuccessful />} />
+      <Route path="/error" element={<Error />} />
+    </Routes>
   );
 }
 
