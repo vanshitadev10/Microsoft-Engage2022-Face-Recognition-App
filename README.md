@@ -24,6 +24,8 @@ Firebase
 * The data is fetched into the Sign-in page. The webcam captures the new image (the image of the person who wants to login).
 * The image with the maximum confidence and the maximum detection score, from the database of unknown faceprints, will be taken into consideration and compared with the new captured image. If the image if detected, the person logins successfully else a prompt appears on the screen which says: “No Such User Found”.
 
+* A working video for reference: https://drive.google.com/file/d/11Du3Xj13p6XMMjH6ErvfN9KLVtZskOJO/view?usp=drive_link
+
 
 ## Scope Of Improvement
 * The face recognition authentication system made by me is using Firebase as the database which is more popular for smaller applications and not for big data and high-performance use cases. So the database can be changed here in order to increase the efficiency of the system.
