@@ -64,7 +64,7 @@ const FaceDataProvider = (props) => {
         dispatchValue({ type: 'SET_ERROR', err: null });
 
         try {
-            const response = await fetch('https://face-detection-ddb26-default-rtdb.firebaseio.com/facedetection.json', {
+            const response = await fetch('https://[PROJECT_ID].firebaseio.com/[PROJECT_NAME].json', {
                 method: 'POST',
                 body: JSON.stringify(userData),
                 headers: {
@@ -86,7 +86,7 @@ const FaceDataProvider = (props) => {
         dispatchValue({ type: 'SET_ERROR', err: null });
 
         try {
-            const response = await fetch('https://face-detection-ddb26-default-rtdb.firebaseio.com/facedetection.json');
+            const response = await fetch('https://[PROJECT_ID].firebaseio.com/[PROJECT_NAME].json');
 
             const data = await response.json();
             const loadData = [];
